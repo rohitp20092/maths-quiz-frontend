@@ -31,10 +31,8 @@ function MathQuizApp() {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    const newSocket = io("https://maths-quiz-backend.vercel.app",{
-      
-  transports: ["websocket", "polling"], // Ensure fallback mechanisms are set
-
+    const newSocket = io("https://maths-quiz-backend.onrender.com", {
+      transports: ["websocket", "polling"],
     });
     setSocket(newSocket);
 
