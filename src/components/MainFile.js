@@ -31,7 +31,7 @@ function MathQuizApp() {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    const newSocket = io("https://maths-quiz-backend.vercel.app/");
+    const newSocket = io("https://maths-quiz-backend.vercel.app");
     setSocket(newSocket);
 
     newSocket.on("newProblem", (problemData) => {
